@@ -2,13 +2,49 @@
 Talk on the emergence of IOJS and what it means to the NodeJS community
 
 
+> it’s “io.js” or “Io.js”
+
 ## Outline
 
+### Timeline
 
+* 2010: Joyent purchased Node.js copyright and trademark from the original author, Ryan Dahl
+* July 11, 2014 @mikeal created private mikeal/node-forward repo to discuss future of node.js
+* August, 2014 - Joyent's CEO Scott Hammond reaching out to Node business, tech, and community leaders re: direction of Node.JS
+* August, 2014 node-forward public organization formed on github, mikeal/node-forward migrated
+  * Node-Forward org included a GitHub fork-button style "fork" of joyent/nodejs
+* September 26 - Scott Hammond held meeting to discuss creation of an advisory board
+* October 9th - Scott Hammond informed @mikeal that node-forward/node repo was in violation of Joyent's trademark on Node.js
+  * Viewed as sign of bad faith, underminning efforts in the creation of advisory board
+  * Repositroy then made private
+* October 23rd - First Advisory Board Meeting
+* November 20th - Node Advisory Board: If 'fork' made public, had to be under a different name
+* November 26th - Fedor Induty (long-time Node.js core contributor, active node-forward participant) decided he would create a fork with a different name
+  * The Node-Forward TC decided to move their node-forward/node work to  the io.js repo (non-tech discussion remains on Node-Forward)
 
+At that time, @mikeal wrote:
+> The first goal of the foundation is to house core development at a neutral organization that can support Node. Nobody prefers that work to be released as a fork and we will continue to work with Joyent to make them a member and even a leader of this foundation. Joyent may decide that the best thing for Node is to continue their own work in parallel to the work other contributors are taking under the foundation in a symbiotic manner that has propelled projects like Linux and BSD. In that case the contributors in the TC are committed to releasing as a “fork” although they do not find it preferable.
 
+Node-Forward core-contributors formed a Technical Committee (TC)
 
 ## Dump Space
+
+http://www.infoworld.com/article/2855057/application-development/why-iojs-decided-to-fork-nodejs.html
+> MR: We've been working with Joyent since July to try and move the project to a structure where the contributors and community can step in and effectively solve the problems facing Node [including the lack of active and new contributors and the lack of releases]. My guess is that Fedor was tired of waiting and set io.js up. He didn't promote it or anything, but those of us who were close enough saw it and jumped on. Then we moved all the Node core-related Node Forward work over, which has been building for some time but can't do a release due to trademark restrictions.
+
+And from: http://blog.izs.me/post/104685388058/io-js
+
+> IS: Does IO.js compete with Joyent or Node.js?
+
+> No. The intent of IO.js is to provide a space for the Node core team to continue to do the work of improving Node.
+
+> IO.js continues the efforts of Node Forward. We are committed to making forward progress and serving the Node.js community, both in technical and non-technical issues.
+
+Goals:
+* Faster release cycle
+* More contributors to Core
+* Open governence
+
 
 ### Node Forward
 Node Forward - http://nodeforward.org/   
@@ -16,6 +52,39 @@ Brain-child of @mikeal in an effort to improve node's ecosystem, Website went li
 "Node Forward is a broad community effort to improve Node, JavaScript, and their ecosystem through open collaboration"   
 
 _Node Forward is you._
+
+### Node.js Advisory Board October 23, 2014
+https://www.joyent.com/blog/node-js-advisory-board   
+https://github.com/joyent/nodejs-advisory-board/   
+ * README.md slow to be updated, find full notes here: https://github.com/joyent/nodejs-advisory-board/tree/master/meetings
+
+ https://github.com/joyent/nodejs-advisory-board/blob/master/meetings/2015-01-14/minutes.md#path-to-merge-iojs-and-nodejs-sh-bb-tf
+ 
+> IS: If we’re talking about merging iojs into Node, it’s pretty straighforward. Fix governance, foundation, and releases then they could merge. Those take time and that’s understood. Been forthcoming that the hope and intention is to merge project.
+
+http://nodejs.org/about/advisory-board/   
+
+> "The Node.js Advisory Board will provide input to the Node.js project leadership on a broad range of topics, including the project roadmap, policies and procedures around contribution, membership and governance of the core team, and the long-term governance structure of the Node.js project. "
+
+
+* Current Members:
+* Bert Belder - StrongLoop, Inc.
+* Danese Cooper - Expert in Open Source Communities
+* Kevin Decker -  Walmart
+* TJ Fontaine - Joyent
+* Dav Glass - Yahoo
+* Scott Hammond - Joyent
+* Cian Ó Maidín - nearForm
+* Todd M. Moore - IBM
+* Gianugo Rabellino - Microsoft Open Technologies, Inc.
+* Issac Roth - StrongLoop, Inc.
+* Chris Saint-Amant - Netflix
+* Isaac Schlueter - npm
+* Dan Shaw - NodeSource
+* Erik Toth - PayPal
+* Chris Williams - Emerging Technology Advisors
+
+(Note overlap: Bert Belder, Isaac Schlueter)
 
 ### IO.JS
 https://github.com/iojs/io.js
@@ -160,7 +229,9 @@ https://github.com/iojs/io.js/tree/v1.x/doc/tc-meetings
 ## Installing iojs
 * nvm support already shipped
 * n support has been PRd, waiting for merge (https://github.com/tj/n)
-* bew support TBD (https://github.com/Homebrew/homebrew/pull/35853)
+* brew support TBD (https://github.com/Homebrew/homebrew/pull/35853)
+* NodeSource working it https://github.com/nodesource/distributions/issues/55
+
 
 On Windows, there's .msi installer
 https://iojs.org/dist/v1.0.3/
