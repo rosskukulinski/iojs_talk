@@ -6,6 +6,29 @@ Talk on the emergence of IOJS and what it means to the NodeJS community
 
 ## Outline
 
+* Title Slide
+* Introduction
+* TLDR;?
+* Background
+ * Node.js Organizational structure
+   * Node.js trademark & copywrite owned by Joyent
+   * Open-source, but ultimate power is with the BDFL
+     * BDFL (Currently TJ Fontaine - Joyent)
+   * Source tree located at https://github.com/joyent/node
+   * Documentation
+
+
+ * Rewind to 2014.
+ 
+* Technical Changes
+* Getting started with iojs
+ * Installing the damn thing!
+
+* Node v0.6.0 - Novemebr 5th, 2011
+* Node v0.8.0 - June 25th, 2012
+* Node v0.10.0 - March 11th, 2013
+* Node v0.12.0 - ???
+
 ### Timeline
 
 * 2010: Joyent purchased Node.js copyright and trademark from the original author, Ryan Dahl
@@ -15,12 +38,14 @@ Talk on the emergence of IOJS and what it means to the NodeJS community
   * Node-Forward org included a GitHub fork-button style "fork" of joyent/nodejs
 * September 26 - Scott Hammond held meeting to discuss creation of an advisory board
 * October 9th - Scott Hammond informed @mikeal that node-forward/node repo was in violation of Joyent's trademark on Node.js
-  * Viewed as sign of bad faith, underminning efforts in the creation of advisory board
+  * Viewed as sign of bad faith, undermining efforts in the creation of advisory board
   * Repositroy then made private
+* October 9th - Node TC agrees to switch doing dev from joyent/node to node-forward/node. Want to prove that this new model where contributors have more control... then that model can reconcile with Joyent.
 * October 23rd - First Advisory Board Meeting
 * November 20th - Node Advisory Board: If 'fork' made public, had to be under a different name
 * November 26th - Fedor Induty (long-time Node.js core contributor, active node-forward participant) decided he would create a fork with a different name
   * The Node-Forward TC decided to move their node-forward/node work to  the io.js repo (non-tech discussion remains on Node-Forward)
+  * It would seem that Fedor's launch was on his own, not all TC was on-board with the switch
 
 At that time, @mikeal wrote:
 > The first goal of the foundation is to house core development at a neutral organization that can support Node. Nobody prefers that work to be released as a fork and we will continue to work with Joyent to make them a member and even a leader of this foundation. Joyent may decide that the best thing for Node is to continue their own work in parallel to the work other contributors are taking under the foundation in a symbiotic manner that has propelled projects like Linux and BSD. In that case the contributors in the TC are committed to releasing as a “fork” although they do not find it preferable.
@@ -65,6 +90,10 @@ https://github.com/joyent/nodejs-advisory-board/
 http://nodejs.org/about/advisory-board/   
 
 > "The Node.js Advisory Board will provide input to the Node.js project leadership on a broad range of topics, including the project roadmap, policies and procedures around contribution, membership and governance of the core team, and the long-term governance structure of the Node.js project. "
+
+
+Node-Forward Oct 9th meeting https://cloudup.com/iXElAwMeMHS
+  * Stressing plans
 
 
 * Current Members:

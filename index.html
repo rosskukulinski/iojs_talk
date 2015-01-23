@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Introduction to iojs</title>
+    
+    <meta name="description" content="A 20 minute talk on the history of iojs and how to get involved.">
+    <meta name="author" content="Ross Kukulinski">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="static/css/reveal.min.css">
+    <link rel="stylesheet" href="static/css/theme/default.css" id="theme">
+    
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="static/lib/css/zenburn.css">
+    <!--<link rel="stylesheet" href="static/css/print/pdf.css">-->
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="static/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+    
+    <!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+  </head>
+  
+  <body ng-app ng-cloak>
+    
+    <div class="reveal">
+      
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Introduction to iojs</h2>
+          <p>
+            <small><a href="http://kukulinski.com">Ross Kukulinski</a> / <a href="http://twitter.com/rosskukulinski">@rosskukulinski</a> / <a href="https://getyodlr.com">yodlr</a></small>
+          </p>
+          <p>
+            <small>Last edited January 22, 2015</small><br/>
+            <small><a href="https://github.com/rosskukulinski/iojs_talk">https://github.com/rosskukulinski/iojs_talk</a></small>
+          </p>
+        </section>
+        
+        <section>
+          <h2>Disclaimer</h2>
+          <ul>
+            <li>The following opinions are my own</li>
+            <li>Lots of history / side conversations behind iojs</li>
+            <li>Would love corrections/edits via <a href="https://github.com/rosskukulinski/iojs_talk">GitHub</a></li>
+          </ul>
+
+        </section>
+        
+        <section>
+          <h2>Node.js Background</h2>
+          <ul>
+            <li>Originally created by Ryan Dahl</li>
+            <li>Trademark and copywrite purchased by Joyent in 2010</li>
+            <li>Open Source under <a href="https://github.com/joyent/node/blob/master/LICENSE">MIT License</a></li>
+            <li>Project led by Benevolent Dictator for Live (BDFL), currently <a href="http://venturebeat.com/2014/01/15/the-king-is-dead-long-live-the-king-meet-nodes-newest-leader/">TJ Fontaine</a> of Joyent</li>
+            <li>Even numbered releases are "stable"</li>
+        </section>
+        
+        <section>
+          <h2>Node.js Release History</h2>
+          <ul>
+            <li>Node v0.6.0  - Novemebr 5th, 2011</li>
+            <li>Node v0.8.0  - June 25th, 2012</li>
+            <li>Node v0.10.0 - March 11th, 2013</li>
+            <li>Node v0.12.0 - "In two weeks" (since early 2014)</li>
+        </section>
+        
+        <section>
+          <h2>Node Core Contributions</h2>
+          <img src="static/img/node_core.png" width="700px">
+          <h2>NPM Package Count</h2>
+          <img src="static/img/npm_growth2.png" width="500px">
+        </section>
+        
+        <section>
+          <h2>Community frustration</h2>
+          <ul>
+            <li>Slow and unpredictable release cycles</li>
+            <li>Outdated dependancies (V8, libuv, others)</li>
+            <li>Difficult to contribute to core</li>
+            <li>Lack of transparency</li>
+            <li>Limited community involvment in project direction</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Node Forward</h2>
+          <ul>
+            <li>Started in July 2014</li>
+            <li>Brain child of <a href="https://twitter.com/mikeal">Mikeal Rogers</a></li>
+            <li>"Broad community effort to improve Node, JavaScript, and their ecosystem through open collaboration"</li>
+            <li>Formed Technical Committee (TC) of many of Node core commiters</li>
+            <li>TC meetings recorded via Google Hangouts</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Node.js Advisory Board</h2>
+          <ul>
+            <li>Joyent's new CEO, Scott Hammond, recognizes community frustration</li>
+            <li>Forms <a href="https://www.joyent.com/blog/node-js-advisory-board">Node.js Advisory Board</a> to open dialog</li>
+            <li>Announced on October 23rd 2014, but process started in September 2014</li>
+            <li>AB members overlap with TC</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Timeline of iojs</h2>
+          <ul>
+            <li>July 11, 2014: <a href="https://twitter.com/mikeal">Mikeal Rogers</a> creates private node-forward repository</li>
+            <li>Early August 2014: Joyent's new CEO, Scott Hammond, reaches out to Node community leaders re: direction of Node.js</li>
+            <li>August 2014: node-forward GitHub organization formed, including "fork" of joyent/node</li>
+            <li>October 9, 2014: node-forward/node conflicts with Node.js trademark, repo made private</li>
+            <li>November 26th, 2014: Fedor Induty (long-time Node.js core contributor, active node-forward participant) creates iojs org, TC moves dev there</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Does iojs compete with Joyent or Node.js?</h2>
+          <ul>
+            <li>No, (not really)</li>
+            <li>Opportunity for Node core team to rapidly improve Node.</li>
+            <li>Goal is to eventually merge iojs back to Node</li>
+        </section>
+        
+        <section>
+          <h2>Steps to merge iojs into Node.js</h2>
+          <ul>
+            <li>Fix governence</li>
+            <li>Create a foundation</li>
+            <li>Improve release process</li>
+            <li>Profit!</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>So what's new with iojs? (1/2)</h2>
+          <ul>
+            <li>Major V8 upgrade
+              <ul>
+                <li>3.14.5.9 in Node v0.10.35</li>
+                <li>3.26.33 in Node v0.11.14</li>
+                <li>3.31.74.9 in iojs v1.0.0</li>
+                <li>4.1 in iojs v1.0.3 (not breaking change)</li>
+              </ul>
+            </li>
+            <li>V8 upgrade brings lots of fixes and perf improvements</li>
+            <li>V8 version now in line with Chrome (helpful for <a href="http://nwjs.io/">NW.js</a>)</li>
+            <li>Support for ES6 features w/o --harmony flag</li>
+            <li><a href="https://github.com/iojs/iojs/blob/v1.x/CHANGELOG.md#summary-of-changes-from-nodejs-v01035-to-iojs-v100 ">Changelog from v0.10.35</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>So what's new with iojs? (2/2)</h2>
+          <ul>
+            <li>updated npm:latest (curently 2.1.18)</li>
+            <li>openssl 1.0.1k</li>
+            <li>Streams3</li>
+            <li>execSync child_process</li>
+            <li>Cluster round-robin</li>
+            <li>Crypto performance improvements</li>
+            <li>For deep-dive, check out <a href="https://twitter.com/trevnorris">@trevnorris</a> talk at <a href="https://www.youtube.com/watch?v=HW89vNKCUMw&list=PLDVWhE1r7sji1NpNKmjfJiJgvr1UAVNyY&index=7">NodeDay</a></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>ES6 in iojs</h2>
+          <ul>
+            <li>No more '--harmony' flag</li>
+            <li>Block scoping, let, const, collections, map, generators, promises, and more!</li>
+            <li>See <a href="https://iojs.org/es6.html">iojs es6 page</a></li>
+            <li>Also helpful is <a href="https://kangax.github.io/compat-table/es6/">es6 compatability table</a></li>
+            <li>And interesting <a href="https://gist.github.com/cerebrl/8fe8ffe04bace984882e">es6 features exploration</a></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>There's no such thing as a free lunch</h2>
+        </section>
+        
+        <section>
+          <h2>iojs has technical issues</h2>
+          <ul>
+            <li>V8 upgrade breaks native modules (use <a href="https://github.com/rvagg/nan">rvagg/nan</a>)</li>
+            <li><a href="https://github.com/iojs/iojs/issues/456">Incomplete list of modules not supported (yet)</a></li>
+            <li>Installed binary conflict node vs iojs</li>
+            <li>Potential npm package 'engine' conflicts</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Getting Started with iojs</h2>
+        </section>
+        <section>
+          <h2>Installing iojs</h2>
+          <ul>
+            <li>Download from <a href="https://iojs.org/dist/latest/">iojs.org</a> (conflicts with Node.js)</li>
+            <li><a href="https://github.com/creationix/nvm">nvm</a> v0.23.0</li>
+            <li><a href="https://github.com/tj/n">n</a> support <a href="https://github.com/tj/n/pull/216">PRed</a></li>
+            <li>Homebrew support <a href="https://github.com/Homebrew/homebrew/pull/35853">PRed</a></li>
+            <li>NodeSource distribution <a href="https://github.com/nodesource/distributions/issues/55">in development</a></li>
+            <li>Heroku already supports iojs</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Contributing to iojs</h2>
+          <ul>
+            <li>Create a <a href="https://github.com/iojs/logos">logo</a></li>
+            <li>Triage bugs with <a href="https://nodebug.me/">nodebug.me</a></li>
+            <li>Hang out on #iojs on Freenode</li>
+            <li>Voice your opinions/ideas on <a href="https://github.com/node-forward/discussions/issues">node-forward/discussions</a></li>
+            <li>Read the <a href="https://github.com/iojs/iojs/blob/v1.x/COLLABORATOR_GUIDE.md">Collaborator Guide</a></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>tldr;</h2>
+          <ul>
+            <li>iojs is a community fork of Joyent's Node.js</li>
+            <li>Focused on improving pace of technological improvements</li>
+            <li>Will likely merge with Node.js if governence issues resolved</li>
+            <li>This is healthy and necessary for the Node ecosystem</li>
+            <li>Strap yourself in: things might be bumpy for a while</li>
+            <li>Keep your prod systems running Node.js for now</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h1>Thanks!</h1>
+          <p>Ross Kukulinski</p>
+          <p>kukulinski.com | @rosskukulinski</p>
+        </section>
+        
+      </div>
+      
+    </div>
+    
+    <script src="static/lib/js/head.min.js"></script>
+    <script src="static/js/reveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src=  "static/js/talk.js"></script>
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        
+        theme: Reveal.getQueryHash().theme, // available themes are in /static/css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+        
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'static/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+      
+    </script>
+  </body>
+</html>
