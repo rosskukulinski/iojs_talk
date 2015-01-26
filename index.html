@@ -268,6 +268,13 @@
         // Parallax scrolling
         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
         // parallaxBackgroundSize: '2100px 900px',
+
+        // Yodlr config
+        // @param voiceRoom - Name of the room
+        // @param voiceAPIKey - API Key needed to create a room, not needed to join a room
+        voiceRoom: 'iojstalk',
+        voiceAPIKey: '',
+        voiceEmail: '',
         
         // Optional libraries used to extend on reveal.js
         dependencies: [
@@ -276,7 +283,8 @@
           { src: 'static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: 'static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'static/plugin/yodlr/yodlr.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
       
