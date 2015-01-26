@@ -10,7 +10,7 @@ io				= io.listen(app);
 
 var opts = {
 	port: process.env.PORT || 1948,
-	baseDir : __dirname + '/../../'
+	baseDir : __dirname + '/../../../'
 };
 
 io.sockets.on('connection', function(socket) {
