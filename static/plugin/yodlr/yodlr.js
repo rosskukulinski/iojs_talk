@@ -113,6 +113,7 @@ var joinRoom = function() {
 
   room.on('joinedRoom', function(roomName) {
     // toggle css class
+    voice.setEchoEnable(false);
     document.getElementById('voice-connect').className = document.getElementById('voice-connect').className.replace( /(?:^|\s)voice-text(?!\S)/g , '' );
     document.getElementById('voice-connect').className += " voice-text-enabled";
     document.getElementById('voice-connect').innerHTML = ' <i class="fa fa-power-off voice-icon"></i> Connected';
