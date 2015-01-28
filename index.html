@@ -39,10 +39,10 @@
         <section>
           <h2>Introduction to iojs</h2>
           <p>
-            <small><a href="http://kukulinski.com">Ross Kukulinski</a> / <a href="http://twitter.com/rosskukulinski">@rosskukulinski</a> / <a href="https://getyodlr.com">yodlr</a></small>
+            <a href="http://kukulinski.com">Ross Kukulinski</a> / <a href="http://twitter.com/rosskukulinski">@RossKukulinski</a> / <a href="https://getyodlr.com">yodlr</a>
           </p>
           <p>
-            <small>Last edited January 22, 2015</small><br/>
+            <small>Last edited January 28, 2015</small><br/>
             <small><a href="https://github.com/rosskukulinski/iojs_talk">https://github.com/rosskukulinski/iojs_talk</a></small>
           </p>
         </section>
@@ -53,6 +53,7 @@
             <li>The following opinions are my own</li>
             <li>Lots of history / side conversations behind iojs</li>
             <li>Would love corrections/edits via <a href="https://github.com/rosskukulinski/iojs_talk">GitHub</a></li>
+            <li>io.js moves FAST</li>
           </ul>
 
         </section>
@@ -64,13 +65,12 @@
             <li>Trademark and copyright purchased by Joyent in 2010</li>
             <li>Open Source under <a href="https://github.com/joyent/node/blob/master/LICENSE">MIT License</a></li>
             <li>Project led by Benevolent Dictator for Live (BDFL), currently <a href="http://venturebeat.com/2014/01/15/the-king-is-dead-long-live-the-king-meet-nodes-newest-leader/">TJ Fontaine</a> of Joyent</li>
-            <li>Even numbered releases are "stable"</li>
         </section>
         
         <section>
           <h2>Node.js Release History</h2>
           <ul>
-            <li>Node v0.6.0  - Novemebr 5th, 2011</li>
+            <li>Node v0.6.0  - Novemeber 5th, 2011</li>
             <li>Node v0.8.0  - June 25th, 2012</li>
             <li>Node v0.10.0 - March 11th, 2013</li>
             <li>Node v0.12.0 - "In two weeks" (since early 2014)</li>
@@ -119,17 +119,18 @@
           <h2>Timeline of iojs</h2>
           <ul>
             <li>July 11, 2014: <a href="https://twitter.com/mikeal">Mikeal Rogers</a> creates private node-forward repository</li>
-            <li>Early August 2014: Joyent's new CEO, Scott Hammond, reaches out to Node community leaders re: direction of Node.js</li>
+            <li>August 2014: Joyent's new CEO, Scott Hammond, reaches out to Node community leaders re: direction of Node.js</li>
             <li>August 2014: node-forward GitHub organization formed, including "fork" of joyent/node</li>
             <li>October 9, 2014: node-forward/node conflicts with Node.js trademark, repo made private</li>
-            <li>November 26th, 2014: Fedor Indutny (long-time Node.js core contributor, active node-forward participant) creates iojs org, TC moves dev there</li>
+            <li>November 26th, 2014: Fedor Indutny creates iojs org, TC moves dev there</li>
+            <li>January 13th, 2015: io.js 1.0.0 released (Co-insiding with Fedor's birthday!)</li>
           </ul>
         </section>
         
         <section>
           <h2>Does iojs compete with Joyent or Node.js?</h2>
           <ul>
-            <li>No, (not really)</li>
+            <li>No (not really)</li>
             <li>Opportunity for Node core team to rapidly improve Node.</li>
             <li>Goal is to eventually merge iojs back to Node</li>
         </section>
@@ -140,9 +141,19 @@
             <li>Fix governance</li>
             <li>Create a foundation</li>
             <li>Improve release process</li>
-            <li>Profit!</li>
           </ul>
         </section>
+        
+        <section>
+          <h2><a href="https://medium.com/node-js-javascript/state-of-io-js-2b3094e6f923">State of io.js</a></h2>
+          <h3>@mikeal published Jan 27, 2015</h3>
+          <ul>
+            <li>over 400K downloads of iojs so far</li>
+            <li>Last week 8 new committers to #iojs</li>
+            <li>io.js to be marked <em>stable</em> in March</li>
+          </ul>
+        </section>
+              
         
         <section>
           <h2>So what's new with iojs? (1/2)</h2>
@@ -163,6 +174,7 @@
         </section>
         <section>
           <h2>So what's new with iojs? (2/2)</h2>
+          <h3>(Pretty much what will be in 0.12)</h3>
           <ul>
             <li>updated npm:latest (curently 2.1.18)</li>
             <li>openssl 1.0.1k</li>
@@ -209,7 +221,7 @@
             <li>Download from <a href="https://iojs.org/dist/latest/">iojs.org</a> (conflicts with Node.js)</li>
             <li><a href="https://github.com/creationix/nvm">nvm</a> v0.23.0</li>
             <li><a href="https://github.com/tj/n">n</a> support <a href="https://github.com/tj/n/pull/216">PRed</a></li>
-            <li>Homebrew support <a href="https://github.com/Homebrew/homebrew/pull/35853">PRed</a></li>
+            <li>Homebrew support via cask <a href="https://github.com/caskroom/homebrew-cask/blob/master/Casks/iojs.rb">PRed</a></li>
             <li>NodeSource distribution <a href="https://github.com/nodesource/distributions/issues/55">in development</a></li>
             <li>Heroku already supports iojs</li>
           </ul>
@@ -218,10 +230,9 @@
           <h2>Contributing to iojs</h2>
           <ul>
             <li>Create a <a href="https://github.com/iojs/logos">logo</a></li>
-            <li>Triage bugs with <a href="https://nodebug.me/">nodebug.me</a></li>
             <li>Hang out on #iojs on Freenode</li>
             <li>Voice your opinions/ideas on <a href="https://github.com/node-forward/discussions/issues">node-forward/discussions</a></li>
-            <li>Read the <a href="https://github.com/iojs/iojs/blob/v1.x/COLLABORATOR_GUIDE.md">Collaborator Guide</a></li>
+            <li>Get involved with working groups for <a href="https://github.com/iojs/build">build</a>, <a href="https://github.com/iojs/website">website</a>, and/or <a href="https://github.com/iojs/readable-stream">streams</a> (more coming soon)</li>
           </ul>
         </section>
         
