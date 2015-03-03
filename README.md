@@ -24,10 +24,10 @@ Talk on the emergence of IOJS and what it means to the NodeJS community
 * Getting started with iojs
  * Installing the damn thing!
 
-* Node v0.6.0 - Novemebr 5th, 2011
+* Node v0.6.0 - November 5th, 2011
 * Node v0.8.0 - June 25th, 2012
 * Node v0.10.0 - March 11th, 2013
-* Node v0.12.0 - ???
+* Node v0.12.0 - [February 6th, 2015](https://github.com/joyent/node/releases/tag/v0.12.0)
 
 ### Timeline
 
